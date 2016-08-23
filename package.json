@@ -1,16 +1,16 @@
 {
-  "name": "front-end-environment",
-  "version": "1.0.6",
-  "description": "My simple front-end environment",
+  "name": "jhal-muri",
+  "version": "1.0.1",
+  "description": "Front end environment with Gulp and Browser-sync",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "http://github.com/YuriBrunetto/front-end-environment.git"
+    "url": "https://github.com/faisalhmohd/jhal-muri.git"
  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Yuri Brunetto <yuribrunetto@hotmail.com.br> (http://www.ybrntt.com.br)",
+  "author": "Mohammad Faisal",
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.12.3",
