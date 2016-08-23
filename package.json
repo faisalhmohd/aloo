@@ -1,0 +1,23 @@
+{
+  "name": "front-end-environment",
+  "version": "1.0.6",
+  "description": "My simple front-end environment",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/YuriBrunetto/front-end-environment.git"
+ },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yuri Brunetto <yuribrunetto@hotmail.com.br> (http://www.ybrntt.com.br)",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.12.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.3"
+  }
+}
