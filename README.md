@@ -1,4 +1,4 @@
-[logo]: https://github.com/faisalhmohd/jhal-muri/raw/master/logo.svg "Jhal Muri Logo"
+[logo]: https://github.com/faisalhmohd/jhal-muri/raw/master/logo.png "Jhal Muri Logo"
 
 ![alt text][logo]
 
