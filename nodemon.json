@@ -1,0 +1,16 @@
+{
+  "restartable": "rs",
+  "ignore": [
+    "./.git",
+    "./node_modules/**/node_modules",
+    "./views",
+    "./tests/",
+    "./client/",
+    "./public/"
+  ],
+  "execMap": {
+    "js": "node --harmony"
+  },
+  "verbose": true,
+  "ext": "js json"
+}

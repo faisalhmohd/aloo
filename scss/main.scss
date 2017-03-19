@@ -1,6 +1,6 @@
+$color: blue;
+@import "home";
 
-$color: red;
-h1 {
-    color: $color;
-    text-align: center;
+body {
+  color: $color;
 }
