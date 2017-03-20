@@ -1,25 +1,26 @@
-[logo]: https://github.com/faisalhmohd/jhal-muri/raw/master/logo.png "Jhal Muri Logo"
+[logo]: https://github.com/faisalhmohd/jhal-muri/raw/master/assets/logo.png "Aloo Logo"
+[heart]: https://github.com/faisalhmohd/jhal-muri/raw/master/assets/heart.png
+[bangladesh]: https://github.com/faisalhmohd/jhal-muri/raw/master/assets/bangladesh.png
 
-![alt text][logo]
+![Aloo Logo][logo]
 
-# jhal-muri
+# Aloo - the base to your *torkari* (project).
 
-jhal-muri is an easy starting point with NodeJS, ExpressJS, SASS, ReactJS and Redux. Includes testing and docker integration for cross OS development.
+An easy starting point with NodeJS, ExpressJS, SASS, ReactJS and Redux. Includes testing and docker integration for cross OS development.
 
-## Why jhal-muri instead of other stacks?
+## Why Aloo instead of other stacks?
 
-- Watching throughout development, both client and server. Dramatically speed development.
+- Watching throughout development, both client and server. Testing too! Dramatically speeds up development.
 - Easily plug in any DB of choice
 - Docker integration for cross OS development
 - ES6 to leverage the latest JavaScript features
 - SASSify your stylesheets
 - ReactJS server side rendering with Redux for state management
-- Test watching enabled for test-driven development
 
 ## Things to do
 
 - Production setup and deployment
-- Documenation
+- Documentation
 - Adding CLI for multiple starter kits
 
 ## Setup
@@ -57,3 +58,5 @@ Without Docker
   # Develop and Test
   $ npm run start-test-watch
 ```
+
+![love][heart] from ![bangladesh][bangladesh]
