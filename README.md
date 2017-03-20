@@ -1,8 +1,8 @@
 [logo]: https://github.com/faisalhmohd/jhal-muri/raw/master/assets/logo.png "Aloo Logo"
 [heart]: https://github.com/faisalhmohd/jhal-muri/raw/master/assets/heart.png
-[bangladesh]: https://github.com/faisalhmohd/jhal-muri/raw/master/assets/bangladesh.png
+[bangladesh]: https://github.com/faisalhmohd/jhal-muri/raw/master/assets/bangladesh.jpg
 
-![Aloo Logo][logo]
+<img src="https://github.com/faisalhmohd/jhal-muri/raw/master/assets/logo.png" height="120" >
 
 # Aloo - the base to your *torkari* (project).
 
@@ -58,5 +58,4 @@ Without Docker
   # Develop and Test
   $ npm run start-test-watch
 ```
-
-![love][heart] from ![bangladesh][bangladesh]
+<img src="https://github.com/faisalhmohd/jhal-muri/raw/master/assets/heart.png" align="left" height="24"> &nbsp; from &nbsp; <img src="https://github.com/faisalhmohd/jhal-muri/raw/master/assets/bangladesh.jpg" height="20" >
