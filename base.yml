@@ -2,7 +2,6 @@ version: '2'
 services:
   client:
     build: .
-    container_name: masami_client
     ports:
     - "3000:3000"
     volumes:

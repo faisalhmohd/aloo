@@ -1,5 +1,8 @@
 import path from 'path'
 import WriteFilePlugin from 'write-file-webpack-plugin'
+import webpack from 'webpack'
+
+const PROD = (process.env.NODE_ENV == 'production');
 
 module.exports = {
     entry: "./client/index",
@@ -17,8 +20,15 @@ module.exports = {
         }]
     },
 
-    plugins: [
-        new WriteFilePlugin()
+    plugins: PROD ? [
+        new WriteFilePlugin(),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
+        })
+    ] : [
+      new WriteFilePlugin()
     ],
 
     resolve: {

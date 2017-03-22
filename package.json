@@ -1,12 +1,14 @@
 {
-  "name": "masami-client",
+  "name": "aloo",
   "version": "0.1.0",
-  "description": "Contains the source code for the Client Side of Masami Jewels Website",
+  "description": "Starting point with NodeJS, ExpressJS, SASS, ReactJS and Redux",
   "main": "app.js",
   "scripts": {
     "start-test-watch": "./node_modules/jest/bin/jest.js --watchAll",
-    "start-client-watch": "NODE_ENV=development_client babel-node app.js",
-    "start-server-watch": "NODE_ENV=development_server ./node_modules/nodemon/bin/nodemon.js app --exec babel-node"
+    "start-client-watch": "NODE_ENV=development_client babel-node ./bin/app",
+    "start-server-watch": "NODE_ENV=development_server ./node_modules/nodemon/bin/nodemon.js ./bin/app --exec babel-node",
+    "build-server": "babel . -d dist --ignore ./node_modules,./dist,./public,./scss --copy-files",
+    "start-server": "NODE_ENV=production node ./dist/bin/app.js"
   },
   "author": "Mohammad Faisal",
   "license": "MIT",

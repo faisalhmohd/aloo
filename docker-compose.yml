@@ -1,0 +1,7 @@
+version: '2'
+services:
+  client:
+    extends:
+      file: base.yml
+      service: client
+    command: npm run start-server
