@@ -41,7 +41,7 @@ app.set('view engine', 'pug')
 app.listen(port, function() {
     console.log(`------------------------------------------`);
     console.log(`------------------------------------------`);
-    console.log(`Masami Client Server running at ${port}`);
+    console.log(`Server running at ${port}`);
     console.log(`------------------------------------------`);
     console.log(`------------------------------------------`);
 
