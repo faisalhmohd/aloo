@@ -30,7 +30,7 @@ An easy starting point with NodeJS, ExpressJS, SASS, ReactJS and Redux. Includes
   $ yarn install
 ```
 
-###On Docker**
+###On Docker
 
 **Prerequisites**
 - Docker
@@ -130,7 +130,15 @@ Not sure where to deploy? [DigitalOcean](http://www.digitalocean.com) is a great
 
 ## Tutorials
 
-
+- NodeJS - https://nodeschool.io/
+- ReactJS - https://facebook.github.io/react/tutorial/tutorial.html
+- Redux - https://egghead.io/courses/getting-started-with-redux
+- Jest - https://facebook.github.io/jest/docs/getting-started.html
+- ES6 - https://babeljs.io/learn-es2015/
+- SASS - http://sass-lang.com/guide
+- Pug - https://pugjs.org/api/getting-started.html
+- Webpack - https://webpack.js.org/guides/get-started/
+- Docker - https://docs.docker.com/learn/
 
 ## Things left to do
 
