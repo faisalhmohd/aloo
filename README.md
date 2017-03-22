@@ -30,7 +30,7 @@ An easy starting point with NodeJS, ExpressJS, SASS, ReactJS and Redux. Includes
   $ yarn install
 ```
 
-###On Docker
+### On Docker
 
 **Prerequisites**
 - Docker
