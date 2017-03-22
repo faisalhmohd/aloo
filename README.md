@@ -1,4 +1,6 @@
+<p align="center">
 <img src="https://github.com/faisalhmohd/jhal-muri/raw/master/assets/logo.png" height="120" >
+</p>
 
 # Aloo - the base to your *torkari* (project).
 
