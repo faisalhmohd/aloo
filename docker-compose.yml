@@ -4,4 +4,4 @@ services:
     extends:
       file: base.yml
       service: client
-    command: npm run start-server
+    command: sh -c "NODE_ENV=production pm2-docker ./dist/bin/app.js"

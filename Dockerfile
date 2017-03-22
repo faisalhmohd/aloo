@@ -1,10 +1,12 @@
-FROM node:6.9-alpine
+FROM node:6.10-alpine
+MAINTAINER Mohammad Faisal <faisalhmohd@gmail.com>
 
 RUN mkdir app
 
 COPY . /app
 RUN cd /app && \
-    npm i
+    yarn global add pm2 && \
+    yarn install
 
 WORKDIR /app
 

@@ -1,7 +1,3 @@
-[logo]: https://github.com/faisalhmohd/jhal-muri/raw/master/assets/logo.png "Aloo Logo"
-[heart]: https://github.com/faisalhmohd/jhal-muri/raw/master/assets/heart.png
-[bangladesh]: https://github.com/faisalhmohd/jhal-muri/raw/master/assets/bangladesh.jpg
-
 <img src="https://github.com/faisalhmohd/jhal-muri/raw/master/assets/logo.png" height="120" >
 
 # Aloo - the base to your *torkari* (project).
@@ -19,43 +15,73 @@ An easy starting point with NodeJS, ExpressJS, SASS, ReactJS and Redux. Includes
 
 ## Things to do
 
-- Production setup and deployment
 - Documentation
 - Adding CLI for multiple starter kits
 
-## Setup
-
-With Docker
+## Installation
 
 ```bash
-  # For Development
+  # Replace Yarn with NPM if using default package manager.
 
-  # Building Image
-  $ docker-compose -f development.yml build client
+  $ yarn install
+```
 
+**On Docker**
+
+```bash
+  $ docker-compose build
+```
+
+## Development
+
+```bash
+  # Replace Yarn with NPM if using default package manager.
+
+  # Develop on ReactJS
+  $ yarn run start-client-watch
+
+  # Develop on NodeJS
+  $ yarn run start-server-watch
+
+  # Testing
+  $ yarn run start-test-watch
+```
+
+**On Docker**
+
+```bash
   # Develop on ReactJS
   $ docker-compose -f development-client.yml up
 
   # Develop on NodeJS
   $ docker-compose -f development-server.yml up
 
-  # Test Simultaneously by opening a new Terminal
-  $ docker exec -it [CONTAINER_ID] npm run start-test-watch
+  # Testing. Works even during development.
+  $ docker-compose -f test.yml up
 
 ```
 
-Without Docker
+## Production
+
+Manage your processes and application states using PM2.
+
+**On Docker**
 
 ```bash
-  $ npm i
+  # Build the server. Only required when there is code change since last run.
+  $ docker-compose -f production-build.yml up
 
-  # Develop on ReactJS
-  $ npm run start-client-watch
+  # Run the server in daemon
+  $ docker-compose -d up
 
-  # Develop on NodeJS
-  $ npm run start-server-watch
-
-  # Develop and Test
-  $ npm run start-test-watch
 ```
-<img src="https://github.com/faisalhmohd/jhal-muri/raw/master/assets/heart.png" height="24"> &nbsp; from &nbsp; <img src="https://github.com/faisalhmohd/jhal-muri/raw/master/assets/bangladesh.jpg" height="20" >
+
+## License
+
+This project is licensed under the MIT license.
+
+If you have any questions or comments, please create a new issue. I'd be happy to hear your thoughts.
+
+<p align="center">
+<img src="https://github.com/faisalhmohd/jhal-muri/raw/master/assets/bangladesh.jpg" height="20" style="max-width:100%;">
+</p>

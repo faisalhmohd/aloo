@@ -4,4 +4,4 @@ services:
     extends:
       file: base.yml
       service: client
-    command: npm run build-server
+    command: yarn run build-server

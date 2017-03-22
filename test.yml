@@ -4,4 +4,4 @@ services:
     extends:
       file: base.yml
       service: client
-    command: yarn run start-server-watch
+    command: npm run start-test-watch

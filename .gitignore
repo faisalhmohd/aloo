@@ -5,7 +5,10 @@ node_modules/
 .DS_Store
 
 # Bundled files
-# dist
+dist
+
+# Test Cache
+jest
 
 # Logs
 npm-debug.log
