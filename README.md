@@ -17,6 +17,12 @@ An easy starting point with NodeJS, ExpressJS, SASS, ReactJS and Redux. Includes
 
 ## Installation
 
+**Note** - It is preferred to develop on *Docker* since it insures cross OS compatibility of your project codebase.
+
+**Prerequisites**
+- NodeJS 6.10
+- Yarn v0.21.3 or NPM v3.10.10
+
 ```bash
   # Replace Yarn with NPM if using default package manager.
   $ git clone https://github.com/faisalhmohd/aloo.git
@@ -24,7 +30,11 @@ An easy starting point with NodeJS, ExpressJS, SASS, ReactJS and Redux. Includes
   $ yarn install
 ```
 
-**On Docker**
+###On Docker**
+
+**Prerequisites**
+- Docker
+- Docker Compose
 
 ```bash
   $ docker-compose build
@@ -73,6 +83,54 @@ Manage your processes and application states using PM2.
   $ docker-compose -d up
 
 ```
+
+Not sure where to deploy? [DigitalOcean](http://www.digitalocean.com) is a great choice for most projects.
+
+## Project Structure
+
+```bash
+├── assets # Repo readme assets
+├── base.yml # Base Docker Compose file
+├── bin
+│   └── app.js # Starting point to your project
+├── client # All ReactJS code goes here
+│   ├── components
+│   │   ├── app.js
+│   │   ├── home.js
+│   │   └── notfound.js
+│   ├── index.js
+│   ├── reducers # Redux for state management
+│   │   ├── header.js
+│   │   └── index.js
+│   └── routes.js
+├── development-client.yml # Docker Compose for ReactJS development
+├── development-server.yml # Docker Compose for NodeJS development
+├── docker-compose.yml # Docker Compose for Production
+├── Dockerfile # To build Docker image
+├── LICENSE.md
+├── nodemon.json # Nodemon configuration
+├── package.json # Project Dependencies
+├── production-build.yml # Docker Compose to build production
+├── public # Static public assets go here
+│   ├── bundle.js
+│   └── main.css
+├── README.md
+├── scss # SASS stylesheets go here
+│   ├── home.scss
+│   └── main.scss
+├── server # All NodeJS code goes here
+│   └── index.js
+├── tests # All Jest tests go here
+│   └── app.test.js
+├── test.yml # Docker Compose for Test driven development
+├── views # All server side rendered views go here
+│   └── index.pug
+└── webpack.config.dev.js # Webpack configuration
+```
+
+## Tutorials
+
+
 
 ## Things left to do
 
