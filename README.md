@@ -15,16 +15,12 @@ An easy starting point with NodeJS, ExpressJS, SASS, ReactJS and Redux. Includes
 - SASSify your stylesheets
 - ReactJS server side rendering with Redux for state management
 
-## Things to do
-
-- Documentation
-- Adding CLI for multiple starter kits
-
 ## Installation
 
 ```bash
   # Replace Yarn with NPM if using default package manager.
-
+  $ git clone https://github.com/faisalhmohd/aloo.git
+  $ cd aloo
   $ yarn install
 ```
 
@@ -77,6 +73,11 @@ Manage your processes and application states using PM2.
   $ docker-compose -d up
 
 ```
+
+## Things left to do
+
+- Documentation
+- Adding CLI for multiple starter kits
 
 ## License
 
