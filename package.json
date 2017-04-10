@@ -7,7 +7,7 @@
     "start-test-watch": "./node_modules/jest/bin/jest.js --watchAll",
     "start-client-watch": "NODE_ENV=development_client babel-node ./bin/app",
     "start-server-watch": "NODE_ENV=development_server ./node_modules/nodemon/bin/nodemon.js ./bin/app --exec babel-node",
-    "build-server": "babel . -d dist --ignore ./node_modules,./dist,./public,./scss --copy-files"
+    "build-server": "NODE_ENV=production babel . -d dist --ignore ./node_modules,./dist,./public,./scss --copy-files"
   },
   "author": "Mohammad Faisal",
   "license": "MIT",

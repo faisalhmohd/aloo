@@ -144,6 +144,7 @@ Not sure where to deploy? [DigitalOcean](http://www.digitalocean.com) is a great
 
 - Documentation
 - Adding CLI for multiple starter kits
+- Tests
 
 ## License
 

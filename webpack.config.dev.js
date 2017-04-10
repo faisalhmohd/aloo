@@ -23,9 +23,6 @@ module.exports = {
     plugins: PROD ? [
         new WriteFilePlugin(),
         new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
-            }
         })
     ] : [
       new WriteFilePlugin()
