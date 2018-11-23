@@ -1,5 +1,7 @@
 import _ from 'lodash';
 
+console.log('Error foo');
+
 function component() {
   let element = document.createElement('div');
 
