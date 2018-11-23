@@ -3,4 +3,3 @@ node_modules
 
 # Post Build Files
 dist/*
-!dist/index.html
