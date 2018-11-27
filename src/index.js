@@ -1,14 +1,14 @@
-import _ from 'lodash';
+import React from "react";
+import ReactDOM from "react-dom";
 
-console.log('Error foo');
+const Index = () => {
+  return <div>Hello React!</div>;
+};
 
-function component() {
-  let element = document.createElement('div');
+// This is a temporary hack. Will add a better way to handle this.
+let ReactAppDomNode = document.createElement('div');
+ReactAppDomNode.className = 'app';
+const bodyDomNode = document.getElementsByTagName('body')[0];
+bodyDomNode.appendChild(ReactAppDomNode);
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-  return element;
-}
-
-document.body.appendChild(component());
+ReactDOM.render(<Index />, ReactAppDomNode);

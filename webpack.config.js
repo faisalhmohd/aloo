@@ -34,6 +34,14 @@ module.exports = {
 	use: [
 	  'file-loader'
 	]
+      },
+      // Add React Support
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
       }
     ]
   }
