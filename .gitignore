@@ -1,5 +1,8 @@
 # The NodeJS Universe
 node_modules
 
+# Log Files
+*.log
+
 # Post Build Files
 dist/*
