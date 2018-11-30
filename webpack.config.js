@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: './src/index.jsx',
   devtool: 'inline-source-map',
   devServer: {
     contentBase: './dist'
@@ -35,12 +35,26 @@ module.exports = {
 	  'file-loader'
 	]
       },
-      // Add React Support
+      // Add ES2017 Support for JS Files
       {
-        test: /\.js$/,
+        test: /\.js/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: "babel-loader",
+	  query: {
+	    presets: ['@babel/preset-env']
+	  }
+        }
+      },
+      // Add React Support for JSX Files only
+      {
+        test: /\.jsx/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+	  query: {
+	    presets: ['@babel/preset-react', '@babel/preset-env']
+	  }
         }
       }
     ]
