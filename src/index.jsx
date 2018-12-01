@@ -1,14 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-const Index = () => {
-  return <div>Hello React!</div>;
-};
+import App from './App';
 
 // This is a temporary hack. Will add a better way to handle this.
-let ReactAppDomNode = document.createElement('div');
-ReactAppDomNode.className = 'app';
+const AppDomNode = document.createElement('div');
+AppDomNode.className = 'app';
 const bodyDomNode = document.getElementsByTagName('body')[0];
-bodyDomNode.appendChild(ReactAppDomNode);
+bodyDomNode.appendChild(AppDomNode);
 
-ReactDOM.render(<Index />, ReactAppDomNode);
+ReactDOM.render(<App/>, AppDomNode);

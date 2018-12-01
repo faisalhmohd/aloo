@@ -65,6 +65,9 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   optimization: {
     usedExports: true
   }
