@@ -2,11 +2,16 @@ const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const globImporter = require('node-sass-glob-importer');
 
 const ASSET_PATH = process.env.ASSET_PATH || '/assets';
 
 module.exports = {
-  entry: './src/index.jsx',
+  entry: {
+    app: './src/index.jsx',
+    css: './src/index.scss'
+  },
   output: {
     filename: '[name].[hash].js',
     path: path.resolve(__dirname, 'dist')
@@ -19,7 +24,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'The Platform',
     }),
-    new webpack.HashedModuleIdsPlugin()
+    new webpack.HashedModuleIdsPlugin(),
+    new MiniCssExtractPlugin({
+      filename: "style.[hash].css",
+    })
   ],
   module: {
     rules: [
@@ -59,9 +67,21 @@ module.exports = {
 	  }
         }
       },
+      // Add SCSS Support and Glob Addition
       {
 	test: /\.scss$/,
-	use: ["style-loader", "css-loader", "sass-loader"]
+	use: [{
+	  loader: "style-loader"
+	}, {
+	  loader: MiniCssExtractPlugin.loader
+	}, {
+	  loader: "css-loader"
+	}, {
+	  loader: "sass-loader",
+	  options: {
+	    importer: globImporter()
+	  }
+	}]
       }
     ]
   },
