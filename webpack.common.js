@@ -6,7 +6,7 @@ const webpack = require('webpack');
 module.exports = {
   entry: './src/index.jsx',
   output: {
-    filename: 'bundle.js',
+    filename: '[name].[hash].js',
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
@@ -14,6 +14,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'The Platform',
     }),
+    new webpack.HashedModuleIdsPlugin()
   ],
   module: {
     rules: [
