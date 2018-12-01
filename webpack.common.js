@@ -4,13 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-  mode: 'development',
   entry: './src/index.jsx',
-  devtool: 'inline-source-map',
-  devServer: {
-    contentBase: './dist',
-    hot: true
-  },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -20,7 +14,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'The Platform',
     }),
-    new webpack.HotModuleReplacementPlugin()
   ],
   module: {
     rules: [
