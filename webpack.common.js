@@ -1,6 +1,5 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const globImporter = require('node-sass-glob-importer');
@@ -9,11 +8,11 @@ const ASSET_PATH = process.env.ASSET_PATH || '/assets';
 
 module.exports = {
   entry: {
-    app: './src/index.jsx',
-    css: './src/index.scss'
+    app: './server/src/index.jsx',
+    css: './server/src/index.scss'
   },
   output: {
-    filename: '[name].[hash].js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
@@ -21,13 +20,10 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.ASSET_PATH': JSON.stringify(ASSET_PATH)
     }),
-    new HtmlWebpackPlugin({
-      title: 'The Platform',
-    }),
     new webpack.HashedModuleIdsPlugin(),
     new MiniCssExtractPlugin({
-      filename: "style.[hash].css",
-    })
+      filename: "style.css",
+    }),
   ],
   module: {
     rules: [
@@ -51,10 +47,7 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
-	  query: {
-	    presets: ['@babel/preset-env']
-	  }
-        }
+	}
       },
       // Add React Support for JSX Files only
       {
@@ -62,9 +55,6 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
-	  query: {
-	    presets: ['@babel/preset-react', '@babel/preset-env']
-	  }
         }
       },
       // Add SCSS Support and Glob Addition
